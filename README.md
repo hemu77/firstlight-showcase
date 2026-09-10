@@ -30,7 +30,9 @@ The interface checks feeds every five minutes while open. Provider publication t
 
 ## Source availability and attribution
 
-These recordings play at 40% of their original speed for readability and show a local development session, not proof of a hosted prediction service. Branding has since been refined.
+These recordings play at half speed with 25-FPS blended interpolation for smoother viewing. They show a local development session, not measured rendering performance or proof of a hosted prediction service. Branding has since been refined.
+
+See [backend deployment requirements](DEPLOYMENT.md). GitHub stores code; a separate host must run the Python API and prediction jobs.
 
 See [project overview](OVERVIEW.md) and the intentionally limited [camera-motion sample](samples/explorer-motion.ts). This is a portfolio showcase, not the full application source.
 
