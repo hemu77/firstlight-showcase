@@ -6,6 +6,8 @@ FirstLight combines reported natural events, geographic exploration, simulated s
 
 ## What visitors can explore
 
+The deployed interface now also provides seven-day ECMWF/Copernicus GWIS fire-weather outlooks and on-demand Cesium OSM Buildings. The provider outlook is separate from FirstLight ML; it is Fire Weather Index, not a probability of ignition. The 3D toggle streams nearby reference buildings only when requested below 15 km. It pauses at orbital altitude and in hidden tabs, retains a base-map fallback, and respects the Community streaming allowance. A saved NYC example is shown only near New York.
+
 - Navigate from orbit to cities and reported locations.
 - Understand marker colors using the map key.
 - Filter supported event history and replay observations.
