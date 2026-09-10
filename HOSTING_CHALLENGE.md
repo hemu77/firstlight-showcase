@@ -29,3 +29,13 @@ The map's observed event feeds and the fire model are separate. Global reported 
 - The model passed its August 2024 temporal/geographic ranking gates. Current-year transfer remains unvalidated; this is not an ignition, spread, earthquake, or emergency-warning system.
 
 The public [backend directory](backend/) makes this hosting approach inspectable. Full UI source, credentials, training data, and model files are not published here.
+
+## Deployment verification — September 10, 2026 (UTC)
+
+- Render completed a source-processing run and wrote the private snapshot at **06:57:22 UTC**, using a NOAA observation at **06:00:21 UTC**. GitHub recorded the snapshot commit at **06:57:24 UTC**.
+- The public Vercel prediction panel displayed that new calculation timestamp, confirming the Render → private GitHub → Vercel path, not merely a local run.
+- This scan had **zero eligible forecast cells**. The application displayed zero instead of fabricated scores. This run verifies hosted processing/storage delivery, not nonempty current prediction accuracy.
+- Ten focused snapshot/model tests passed; TypeScript and the Vercel build passed. This is bounded verification, not a claim of zero bugs or a full security audit.
+- A deployment issue exposed a stale credential remaining in an asynchronously loaded masked secret field. A successful save was insufficient evidence; verifying the persisted value privately and then an authenticated runtime operation resolved it. No token values are published.
+
+[Open FirstLight](https://firstlight-sai-hemanth-kilaru-geo-vercel.vercel.app/) · [Prediction service health](https://firstlight-predictions.onrender.com/healthz)

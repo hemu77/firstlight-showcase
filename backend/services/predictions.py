@@ -44,6 +44,7 @@ def calculate():
 
 
 @app.get('/healthz')
+@app.api_route('/', methods=['GET','HEAD'])
 def health():
     return {'service':'FirstLight predictions', **state, 'mode':'visitor-triggered'}
 
