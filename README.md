@@ -40,7 +40,7 @@ These recordings play at half speed with 25-FPS blended interpolation for smooth
 
 See [backend deployment requirements](DEPLOYMENT.md). GitHub stores code; a separate host must run the Python API and prediction jobs.
 
-The [backend API reference](BACKEND_API.md) documents implemented endpoints and the prediction response without publishing private implementation or model artifacts.
+The [backend API reference](BACKEND_API.md) documents the broader local API. The selected [hosted prediction backend](backend/) is now published; its model artifacts and credentials remain private. Read [the hosting challenge and visitor-triggered refresh design](HOSTING_CHALLENGE.md) for what updates while people use the globe, what runs locally, and the limitations of free hosting.
 
 See [project overview](OVERVIEW.md) and the intentionally limited [camera-motion sample](samples/explorer-motion.ts). This is a portfolio showcase, not the full application source.
 
