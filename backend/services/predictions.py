@@ -19,7 +19,7 @@ def calculate():
             previous = read_remote()
         except Exception:
             previous = None
-        if previous is not None and not should_refresh(previous):
+        if previous is not None and previous.get('publisher') == os.getenv('RENDER_SERVICE_ID','local') and not should_refresh(previous):
             state['refresh'] = 'unchanged'
             return
         directory = Path(os.getenv('FIRSTLIGHT_MODEL_DIR','lake/models/frp-history-2024'))
@@ -33,6 +33,7 @@ def calculate():
             raise RuntimeError('Calculation failed')
         import json
         data = json.loads(Path(os.getenv('FIRSTLIGHT_PREDICTIONS_PATH','lake/predictions/latest.json')).read_text())
+        data['publisher'] = os.getenv('RENDER_SERVICE_ID','local')
         write_remote(data)
         state.update(refresh='complete', last_success=data['generated_at'])
     except Exception:
