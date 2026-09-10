@@ -40,6 +40,8 @@ These recordings play at half speed with 25-FPS blended interpolation for smooth
 
 See [backend deployment requirements](DEPLOYMENT.md). GitHub stores code; a separate host must run the Python API and prediction jobs.
 
+The [backend API reference](BACKEND_API.md) documents implemented endpoints and the prediction response without publishing private implementation or model artifacts.
+
 See [project overview](OVERVIEW.md) and the intentionally limited [camera-motion sample](samples/explorer-motion.ts). This is a portfolio showcase, not the full application source.
 
 The implementation repository is private. This document and its GIFs can be shared separately without sharing source files or model artifacts. A public website necessarily delivers its frontend JavaScript and assets to visitors; private hosting does not make that browser-delivered material secret.
