@@ -2,6 +2,12 @@
 
 **Designed and built by SAI HEMANTH KILARU**
 
+## Open to work
+
+I am open to software engineering opportunities and geospatial collaborations. [View my current résumé (PDF)](SAI-HEMANTH-KILARU-Resume.pdf), [follow my work on LinkedIn](https://www.linkedin.com/in/sai-hemanth-kilaru/), or [email skilaru@arizona.edu](mailto:skilaru@arizona.edu?subject=FirstLight%20collaboration).
+
+The résumé is provided by the project author. This repository shares selected project evidence, not the full private implementation; the recordings do not demonstrate a currently hosted prediction backend.
+
 FirstLight brings reported natural events, satellite-orbit simulation, and experimental fire forecasts into one interactive globe. Move from orbit to a place, select an event, and inspect its source and observation time without leaving the map.
 
 ## Explore the globe
