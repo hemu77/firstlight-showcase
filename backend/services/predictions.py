@@ -36,7 +36,8 @@ def calculate():
         data['publisher'] = os.getenv('RENDER_SERVICE_ID','local')
         write_remote(data)
         state.update(refresh='complete', last_success=data['generated_at'])
-    except Exception:
+    except Exception as exc:
+        print('Prediction refresh failed:', type(exc).__name__, getattr(getattr(exc,'response',None),'status_code',None), flush=True)
         state['refresh'] = 'failed'
     finally:
         lock.release()
@@ -63,5 +64,6 @@ def refresh():
 def predictions():
     try:
         return read_remote()
-    except Exception:
+    except Exception as exc:
+        print('Snapshot read failed:', type(exc).__name__, getattr(getattr(exc,'response',None),'status_code',None), flush=True)
         return {'status':'unavailable','predictions':[]}
